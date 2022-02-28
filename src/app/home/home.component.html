@@ -1,25 +1,18 @@
+<app-search></app-search>
 <ul>
-    <li *ngFor="let item of items">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{ item.image }}" />
-        
-            <div class="card-body">
-              <h3 class="card-title">{{ item.title }}</h3>
-              <h4 class="card-text">{{ item.price }}€</h4>
-              <p class="card-text">{{ item.description }}</p>
-        
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{ item.email }}</li>
-            </ul>
-            <span class="favourite {{item.favourite?'':'not'}}">
-                ♥
-            </span>
-        
-          </div>
+  <li *ngFor="let item of items">
+    <div class="card" style="width: 18rem">
+      <img class="card-img-top" src="{{ item.image }}" />
 
-    </li>
+      <div class="card-body">
+        <h3 class="card-title">{{ item.title }}</h3>
+        <h4 class="card-text">{{ item.price }}€</h4>
+        <p class="card-text">{{ item.description }}</p>
+      </div>
+      <h4 class="card-email">
+        {{ item.email }}
+      </h4>
+      <span class="favourite {{ item.favourite ? '' : 'not' }}"> ♥ </span>
+    </div>
+  </li>
 </ul>
-
-
-

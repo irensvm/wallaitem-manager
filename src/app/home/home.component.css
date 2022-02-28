@@ -51,9 +51,10 @@ li a img {
 
 }
 
-.list-group-item {
+.card-email {
     color: #13C1AC;
-    background-color: #FFCEE6;
+    padding: 0 ;
+    margin: auto;
 
 }
 
@@ -74,6 +75,7 @@ span .favourite {
     top: 0.5rem;
     left: 1.2rem;
     font-size: 40px;
+    color: red;
 }
 
 
