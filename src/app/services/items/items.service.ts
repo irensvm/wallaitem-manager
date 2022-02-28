@@ -8,6 +8,13 @@ export class ItemsService {
 
   getItemByTitle(title: string): Item{
     return this.getAll().find(item => item.title == title)!
+    
+  }
+  getItemByPrice(price: string): Item{
+    return this.getAll().find(item => item.price == price)!
+  }
+  getItemByDesc(description: string): Item{
+    return this.getAll().find(item => item.description == description)!
   }
   getAllItemssBySearchTerm(searchTerm:string) :Item[]{
     return  this.getAll().filter(item =>
