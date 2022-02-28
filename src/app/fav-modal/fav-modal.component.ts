@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../shared/models/Item';
 
 @Component({
   selector: 'app-fav-modal',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fav-modal.component.css']
 })
 export class FavModalComponent implements OnInit {
- // @Input() items: [];
+ 
 
 
   constructor() { }
