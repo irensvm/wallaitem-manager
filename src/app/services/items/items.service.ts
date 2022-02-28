@@ -9,6 +9,10 @@ export class ItemsService {
   getItemByTitle(title: string): Item{
     return this.getAll().find(item => item.title == title)!
   }
+  getAllItemssBySearchTerm(searchTerm:string) :Item[]{
+    return  this.getAll().filter(item =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()));
+  }
 
   getAll(): Item[] {
     return [

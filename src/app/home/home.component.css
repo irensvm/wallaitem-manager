@@ -83,3 +83,12 @@ span .favourite {
     color: white;
     
 }
+
+
+.pages {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+

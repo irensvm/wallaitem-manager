@@ -10,6 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   items: Item[] = [];
+  p: number = 1;
+  collection: any[] | undefined
+
+
 
   constructor(
     private itemsService: ItemsService,

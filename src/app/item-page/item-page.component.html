@@ -1,14 +1,24 @@
-<div class="container">
-    <img [src]="item.image" [alt]="item.title" >
-    <div class="item-details">
-        <div class="header">
-            <h1>{{item.title}}</h1>
-        </div>
-        <h2>{{item.description}}</h2>
-        <h2>{{item.price}}</h2>
-        <h2>{{item.email}}</h2>
+<app-not-found [visible]="!item" notFoundMessage="Item no encontrado" resetLinkText="Volver a item manager"></app-not-found>
+<div>
+    <button routerLink="/">Volver a Item Manager </button>
+    <div class="container">
 
-
-    </div>
+        <div class="item-img">
+            <img [src]="item.image" [alt]="item.title" />
     
+        </div>
+      
+      <div class="item-details">
+        <div>
+          <h1>{{ item.title }}</h1>
+        </div>
+        <div>{{ item.description }}</div>
+        <div>Precio: {{ item.price }} €</div>
+        <div>Vendedor: {{ item.email }}</div>
+      </div>
+      <button class="fav-button">Favoritear</button>
+    
+    </div>
+
 </div>
+

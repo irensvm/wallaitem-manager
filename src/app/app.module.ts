@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ItemPageComponent } from './item-page/item-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { ItemPageComponent } from './item-page/item-page.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    ItemPageComponent
+    ItemPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
