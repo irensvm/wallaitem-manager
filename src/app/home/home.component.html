@@ -1,0 +1,25 @@
+<app-search></app-search>
+<app-not-found  [visible]="!items || items.length <=0"></app-not-found>
+
+<div>
+  <ul>
+    <li *ngFor="let item of items  | paginate: { itemsPerPage: 5, currentPage: p }">
+      <div routerLink="/item/{{item.title}}" class="card" style="width: 18rem">
+        <img class="card-img-top" src="{{ item.image }}" />
+  
+        <div class="card-body">
+          <h3 class="card-title">{{ item.title }}</h3>
+          <h4 class="card-text">{{ item.price }}€</h4>
+          <p class="card-text">{{ item.description }}</p>
+        </div>
+        <h4 class="card-email">
+          {{ item.email }}
+        </h4>
+        <button class="favourite {{ item.favourite ? '' : 'not' }}"> ♥ </button>
+      </div>
+    </li>
+  </ul>
+  <div class="pages">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

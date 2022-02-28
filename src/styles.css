@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Montserrat:wght@100;200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
