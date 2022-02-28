@@ -6,6 +6,10 @@ import { Item } from 'src/app/shared/models/Item';
 export class ItemsService {
   constructor() {}
 
+  getItemByTitle(title: string): Item{
+    return this.getAll().find(item => item.title == title)!
+  }
+
   getAll(): Item[] {
     return [
       {
